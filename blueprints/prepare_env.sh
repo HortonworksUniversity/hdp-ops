@@ -4,11 +4,9 @@ cur=$PWD
 
 cd /root/scripts
 ./env_setup.sh
-./copy_jdk.sh
-
 cd $cur
-
 yum -y install ambari-server
+./copy_jdk.sh
 ambari-server setup -s
 ambari-server start
 
