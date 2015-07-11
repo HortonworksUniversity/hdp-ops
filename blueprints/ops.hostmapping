@@ -1,0 +1,18 @@
+{
+  "blueprint":"ops",
+  "default_password":"admin",
+  "host_groups":[
+    { 
+      "name":"master",
+      "hosts":[ { "fqdn":"node1" } ] 
+    },
+    {
+      "name":"worker",
+      "hosts":[ { "fqdn":"node2" }, { "fqdn":"node3" } ]
+    },
+    {
+      "name":"client",
+      "hosts":[ { "fqdn":"node4" } ]
+    }
+  ]
+}
