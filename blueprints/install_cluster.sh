@@ -2,7 +2,6 @@
 
 cur=$PWD
 cd /tmp
-apt-get install -y wget
 rm -rf HDP2.2.zip*
 wget https://github.com/HortonworksUniversity/hdp-ops/archive/HDP2.2.zip
 scp -o "StrictHostKeyChecking=no" HDP2.2.zip node1:/tmp
