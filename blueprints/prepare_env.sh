@@ -17,6 +17,8 @@ ambari-server start
 cd $cur
 
 ssh root@node1 bash <<EOF
+sed -i "/\[main\]/a timeout=1800" /etc/yum.conf
+sed -i "/\[main\]/a retries=10" /etc/yum.conf
 yum -y install ambari-agent
 sleep 20
 sed -i 's/localhost/node1/' /etc/ambari-agent/conf/ambari-agent.ini
@@ -24,18 +26,24 @@ ambari-agent start
 EOF
 
 ssh root@node2 bash <<EOF
+sed -i "/\[main\]/a timeout=1800" /etc/yum.conf
+sed -i "/\[main\]/a retries=10" /etc/yum.conf
 yum -y install ambari-agent
 sleep 20
 sed -i 's/localhost/node1/' /etc/ambari-agent/conf/ambari-agent.ini
 ambari-agent start
 EOF
 ssh root@node3 bash <<EOF
+sed -i "/\[main\]/a timeout=1800" /etc/yum.conf
+sed -i "/\[main\]/a retries=10" /etc/yum.conf
 yum -y install ambari-agent
 sleep 20
 sed -i 's/localhost/node1/' /etc/ambari-agent/conf/ambari-agent.ini
 ambari-agent start
 EOF
 ssh root@node4 bash <<EOF
+sed -i "/\[main\]/a timeout=1800" /etc/yum.conf
+sed -i "/\[main\]/a retries=10" /etc/yum.conf
 yum -y install ambari-agent
 sleep 20
 sed -i 's/localhost/node1/' /etc/ambari-agent/conf/ambari-agent.ini
