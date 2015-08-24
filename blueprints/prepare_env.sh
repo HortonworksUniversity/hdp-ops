@@ -8,7 +8,7 @@ yum -y install ambari-server
 ./copy_jdk.sh
 ambari-server setup -s
 
-sed -i "/agent.task.timeout=600/c\agent.task.timeout=3000" /etc/ambari-server/conf/ambari.properties
+sed -i "/agent.task.timeout=900/c\agent.task.timeout=3000" /etc/ambari-server/conf/ambari.properties
 find /var/lib/ambari-server/resources/stacks/ -name metainfo.xml | while read file; do 
   sed -i "/<timeout>.*<\/timeout>/c\<timeout>3000<\/timeout>" $file 
 done
