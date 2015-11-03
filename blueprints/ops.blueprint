@@ -9,6 +9,12 @@
         "nagios-env" : {
            "nagios_contact" : "admin@localhost"
         }
+      },
+      {
+        "oozie-site" : {
+          "oozie.service.ProxyUserService.proxyuser.oozie.hosts": "*",
+          "oozie.service.ProxyUserService.proxyuser.oozie.groups": "*"
+        }
       }
     ],
     "host_groups" : [
