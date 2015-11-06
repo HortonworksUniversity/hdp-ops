@@ -12,8 +12,8 @@
       },
       {
         "oozie-site" : {
-          "oozie.service.ProxyUserService.proxyuser.oozie.hosts": "*",
-          "oozie.service.ProxyUserService.proxyuser.oozie.groups": "*"
+          "oozie.service.ProxyUserService.proxyuser.falcon.hosts": "*",
+          "oozie.service.ProxyUserService.proxyuser.falcon.groups": "*"
         }
       }
     ],
